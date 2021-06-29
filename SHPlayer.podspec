@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-              基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等
+              基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等, 支持模拟器播放，自己学习使用，请勿用于商业用途
                        DESC
 
   s.homepage         = 'https://github.com/QiuYeHong90/SHPlayer'
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.vendored_frameworks = "IJKMediaFramework.xcframework"
+  s.vendored_frameworks = "SHPlayer/IJKMediaFramework.xcframework"
   s.source_files = 'SHPlayer/Classes/**/*'
   
   # s.resource_bundles = {

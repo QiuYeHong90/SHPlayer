@@ -149,5 +149,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/../../IJKMediaFramework.xcframework" "IJKMediaFramework" "framework" "ios-x86_64-simulator" "ios-arm64"
+install_xcframework "${PODS_ROOT}/../../SHPlayer/IJKMediaFramework.xcframework" "IJKMediaFramework" "framework" "ios-x86_64-simulator" "ios-arm64"
 

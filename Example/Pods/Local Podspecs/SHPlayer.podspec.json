@@ -1,9 +1,9 @@
 {
   "name": "SHPlayer",
   "version": "0.1.0",
-  "summary": "A short description of SHPlayer.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/yeqiu/SHPlayer",
+  "summary": "基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等",
+  "description": "基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等, 支持模拟器播放，自己学习使用，请勿用于商业用途",
+  "homepage": "https://github.com/QiuYeHong90/SHPlayer",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,13 +12,13 @@
     "yeqiu": "793983383@qq.com"
   },
   "source": {
-    "git": "https://github.com/yeqiu/SHPlayer.git",
+    "git": "https://github.com/QiuYeHong90/SHPlayer.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "vendored_frameworks": "IJKMediaFramework.xcframework",
+  "vendored_frameworks": "SHPlayer/IJKMediaFramework.xcframework",
   "source_files": "SHPlayer/Classes/**/*",
   "libraries": [
     "c++",
