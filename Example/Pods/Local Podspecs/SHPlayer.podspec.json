@@ -1,0 +1,44 @@
+{
+  "name": "SHPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of SHPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yeqiu/SHPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yeqiu": "793983383@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yeqiu/SHPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "vendored_frameworks": "IJKMediaFramework.xcframework",
+  "source_files": "SHPlayer/Classes/**/*",
+  "libraries": [
+    "c++",
+    "z",
+    "bz2"
+  ],
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "MediaPlayer",
+    "CoreAudio",
+    "AudioToolbox",
+    "Accelerate",
+    "QuartzCore",
+    "OpenGLES",
+    "AVFoundation",
+    "CoreVideo",
+    "AVKit",
+    "CoreMedia",
+    "VideoToolbox",
+    "CoreTelephony"
+  ]
+}

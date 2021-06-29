@@ -29,14 +29,15 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
+  s.vendored_frameworks = "IJKMediaFramework.xcframework"
   s.source_files = 'SHPlayer/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SHPlayer' => ['SHPlayer/Assets/*.png']
   # }
+  s.libraries     = "c++", "z", "bz2"
+  s.frameworks    = ["UIKit", "Foundation", "MediaPlayer", "CoreAudio", "AudioToolbox", "Accelerate", "QuartzCore", "OpenGLES", "AVFoundation","CoreVideo","AVKit","CoreMedia","VideoToolbox","CoreTelephony"]
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
