@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SHPlayer'
 ```
+或者
+```
+pod 'SHPlayer' ,:git => 'https://github.com/QiuYeHong90/SHPlayer.git'
+
+```
 
 ## Author
 
