@@ -7,7 +7,8 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+IJKMediaFramework.xcframework 支持模拟器iPhone12  和 真机
+基于ijkPlayer，开发视频播放器 支持rtmp 和 网络视频，本地视频
 
 ## Requirements
 
