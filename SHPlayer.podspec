@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SHPlayer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SHPlayer.'
+  s.summary          = '基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+              基于ijkplayer的播放器,可播RMTP、网络视频、本地视频等等
                        DESC
 
   s.homepage         = 'https://github.com/QiuYeHong90/SHPlayer'
@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.vendored_frameworks = "IJKMediaFramework.xcframework"
+  s.vendored_frameworks = "./IJKMediaFramework.xcframework"
   s.source_files = 'SHPlayer/Classes/**/*'
   
   # s.resource_bundles = {
