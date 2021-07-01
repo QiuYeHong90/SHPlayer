@@ -9,7 +9,7 @@ import IJKMediaFramework
 import UIKit
 
 public class SHPlayer: UIView {
-    var url:URL?
+    public var url:URL?
     var player:IJKFFMoviePlayerController?
     public override init(frame: CGRect) {
         super.init(frame: frame)

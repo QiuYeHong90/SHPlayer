@@ -27,24 +27,26 @@
                                     <constraint firstAttribute="height" constant="277" id="p1s-zh-yrl"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGD-jW-Z0q">
-                                <rect key="frame" x="47" y="348" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="tClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7aT-pe-2DS"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jU0-WN-aC2">
+                                <rect key="frame" x="0.0" y="277" width="375" height="390"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jU0-WN-aC2" firstAttribute="top" secondItem="Ncf-Wj-lUh" secondAttribute="bottom" id="8OB-Eq-Kmq"/>
                             <constraint firstAttribute="trailing" secondItem="Ncf-Wj-lUh" secondAttribute="trailing" id="BDq-Cc-BFS"/>
+                            <constraint firstAttribute="bottom" secondItem="jU0-WN-aC2" secondAttribute="bottom" id="DOQ-rR-Wy9"/>
                             <constraint firstItem="Ncf-Wj-lUh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FH2-HO-3Wh"/>
+                            <constraint firstAttribute="trailing" secondItem="jU0-WN-aC2" secondAttribute="trailing" id="Nty-pa-wYj"/>
+                            <constraint firstItem="jU0-WN-aC2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UnY-jY-BRb"/>
                             <constraint firstItem="Ncf-Wj-lUh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="wa4-Qv-FEU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="Ncf-Wj-lUh" id="Jvr-DC-mJA"/>
+                        <outlet property="tableView" destination="jU0-WN-aC2" id="rQ0-AY-Bs7"/>
+                        <outlet property="videoView_h" destination="p1s-zh-yrl" id="cMD-pm-0c7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
