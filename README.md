@@ -32,6 +32,10 @@ pod 'SHPlayer' ,:git => 'https://github.com/QiuYeHong90/SHPlayer.git'
 
 ```
 
+## Demo / AppShareDemo 
+- iOS 分享的扩展 比如系统浏览器 把url 分享到 AppShare
+
+
 ## Author
 
 yeqiu, 793983383@qq.com
