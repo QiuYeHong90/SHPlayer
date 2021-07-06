@@ -12,6 +12,12 @@ IJKMediaFramework.xcframework 支持模拟器iPhone12  和 真机
 
 ## Requirements
 
+项目里面添加data.txt 把下面写进去就可以了
+```
+香港财经:rtmp://202.69.69.180:443/webcast/bshdlive-pc
+香港财经:rtmp://202.69.69.180:443/webcast/bshdlive-pc
+```
+
 ## Installation
 
 SHPlayer is available through [CocoaPods](https://cocoapods.org). To install
