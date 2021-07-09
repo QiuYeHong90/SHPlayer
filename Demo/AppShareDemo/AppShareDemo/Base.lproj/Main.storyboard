@@ -22,12 +22,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLy-NN-uHQ">
+                                <rect key="frame" x="10" y="74.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="textClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="he6-HA-fOK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5gB-NB-90e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2rr-H2-8H8"/>
+                            <constraint firstItem="sLy-NN-uHQ" firstAttribute="top" secondItem="5gB-NB-90e" secondAttribute="bottom" constant="10" id="DzC-ZJ-X1U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gB-NB-90e" secondAttribute="trailing" id="IoS-KM-m8I"/>
+                            <constraint firstItem="sLy-NN-uHQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iAe-qo-dYN"/>
                             <constraint firstItem="5gB-NB-90e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pyj-3v-eUE"/>
                         </constraints>
                     </view>
