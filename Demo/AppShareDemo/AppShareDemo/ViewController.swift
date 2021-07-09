@@ -18,9 +18,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func textClick(_ sender: Any) {
+        let bd:NSString = "dCash"
+        let bc:NSString = "casH"
         
-        let text = "我是老李，老李今天不在家，你找老李有什么事情么李老，李师傅老了"
-        let keyWord:String = "老李"
+        let range1 = bd.range(of: String.init(bc), options: .caseInsensitive)
+        print("range1------包含me \(range1)")
+        if range1.location == NSNotFound {
+            print("range1------bu包含me \(range1)")
+        }
+        
+       ///====
+        
+        let a = "dCash"
+        let b = "casH"
+        
+        if let range = a.range(of: b, options: .caseInsensitive) {
+            let nsRange = a.nsRange(from: range)
+            print("------包含 \(nsRange)")
+        }else{
+            print("------不包含")
+        }
+        
+        
+        let bh = a.lowercased().contains(b.lowercased())
+        let c = a.caseInsensitiveCompare(b) == .orderedSame
+        print("-=-=-=\(bh)")
+        let text = "我是LaoLi，LaoLi今天不在家，你找LaoLi有什么事情么李老，李师傅老了"
+        let keyWord:String = "laoli"
+        
+        let m = text.caseInsensitiveCompare(keyWord) == .orderedSame
+        print("包含么 == \(m)")
         
 //        let mut =  text.normalkeyWords(keyWord, withKeyWordsColor:  UIColor.red)
         let mut = text.getMoreKeyWordsAttributedString(members: (keywrod: keyWord, color: UIColor.red),(keywrod: "今天", color: UIColor.blue))
@@ -41,12 +68,13 @@ extension String{
                 else { return nil }
             return from ..< to
         }
-    func nsRange(from range: Range<String.Index>) -> NSRange {
-            let from = range.lowerBound.samePosition(in: utf16)!
-            let to = range.upperBound.samePosition(in: utf16)!
-            return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
-                           length: utf16.distance(from: from, to: to))
+    func nsRange(from range: Range<String.Index>) -> NSRange? {
+        if let from = range.lowerBound.samePosition(in: utf16),let to = range.upperBound.samePosition(in: utf16) {
+                return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
+                               length: utf16.distance(from: from, to: to))
         }
+        return nil
+    }
     
     /// 遍历字符所有的关键字加颜色
     /// - Parameters:
@@ -96,7 +124,7 @@ extension String{
                 mutableAttributedStr.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
                 //改变多次搜索时searchRange的位置
                 searchRange = NSMakeRange(NSMaxRange(range), self.count - NSMaxRange(range));
-                range = text.range(of: keywrod, options: [], range: searchRange)
+                range = text.range(of: keywrod, options: [.caseInsensitive], range: searchRange)
             }
             
         }
