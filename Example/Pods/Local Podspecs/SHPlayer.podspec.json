@@ -25,6 +25,12 @@
     "z",
     "bz2"
   ],
+  "xcconfig": {
+    "VALID_ARCHS": "armv7s arm64 x86_64"
+  },
+  "pod_target_xcconfig": {
+    "ARCHS[sdk=iphonesimulator*]": "$(ARCHS_STANDARD_64_BIT)"
+  },
   "frameworks": [
     "UIKit",
     "Foundation",

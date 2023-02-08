@@ -1,5 +1,5 @@
 import XCTest
-import SHPlayer
+//import SHPlayer
 
 class Tests: XCTestCase {
     
