@@ -42,15 +42,28 @@ class ViewController: UIViewController {
         guard let text = try? String.init(contentsOfFile: path) else {
             return
         }
-        let list = text.components(separatedBy: "\n")
+//        #EXTM3U
+        let test = text.components(separatedBy: "#EXTM3U\n").last ?? ""
+        let list = test.components(separatedBy: "#EXTINF:-1 ")
         var modelList:[VideoModel] = []
         for item in list {
-            let mList = item.components(separatedBy: ":rtmp")
+            let mList = item.components(separatedBy: "\n")
+            let titles = (mList.first ?? "").components(separatedBy: " ")
+            let jj = titles.first { testItem in
+                return testItem.hasPrefix("group-title=")
+            } ?? ""
+            
+            print("mList == \(mList) \(mList.count)")
+            
+            
+            
+//            let mList = mList.first.components(separatedBy: ":rtmp")
             var itemM = VideoModel.init()
-            itemM.name = mList.first ?? ""
-            if let url = mList.last {
-                itemM.url = "rtmp\(url)"
+            itemM.name = jj.components(separatedBy: "group-title=").last ?? ""
+            if mList.count >= 2 {
+                itemM.url = mList[1]
             }
+            
            
             modelList.append(itemM)
         }
