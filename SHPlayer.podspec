@@ -36,13 +36,13 @@ Pod::Spec.new do |s|
   #   'SHPlayer' => ['SHPlayer/Assets/*.png']
   # }
   s.libraries     = "c++", "z", "bz2"
-  valid_archs = ['armv7s','arm64','x86_64']
-  s.xcconfig = {
-    'VALID_ARCHS' =>  valid_archs.join(' '),
-  }
-  s.pod_target_xcconfig = {
-      'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
-  }
+#  valid_archs = ['armv7s','arm64','x86_64']
+#  s.xcconfig = {
+#    'VALID_ARCHS' =>  valid_archs.join(' '),
+#  }
+#  s.pod_target_xcconfig = {
+#      'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+#  }
   s.frameworks    = ["UIKit", "Foundation", "MediaPlayer", "CoreAudio", "AudioToolbox", "Accelerate", "QuartzCore", "OpenGLES", "AVFoundation","CoreVideo","AVKit","CoreMedia","VideoToolbox","CoreTelephony"]
   
   # s.public_header_files = 'Pod/Classes/**/*.h'

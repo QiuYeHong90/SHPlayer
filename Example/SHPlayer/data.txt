@@ -1,1 +1,1 @@
-香港财经:rtmp://202.69.69.180:443/webcast/bshdlive-pc
+香港财经:rtmp://58.200.131.2:1935/livetv/cctv1
