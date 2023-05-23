@@ -25,7 +25,9 @@ public class SHPlayer: UIView {
         self.toPlay()
         
     }
-    
+    public func stop() {
+        self.player?.stop()
+    }
     public func play(url:String) {
         if url.hasPrefix("http") || url.hasPrefix("rtmp") {
             self.url = URL.init(string: url)
@@ -51,7 +53,7 @@ public class SHPlayer: UIView {
         self.player?.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
         self.player?.view.frame = self.bounds
-        self.player?.scalingMode = .aspectFit
+        self.player?.scalingMode = .aspectFill
         self.player?.shouldAutoplay = true;
         self.autoresizesSubviews = true
         if let view = self.player?.view {
