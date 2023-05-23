@@ -9,7 +9,8 @@
 
 IJKMediaFramework.xcframework 支持模拟器iPhone12  和 真机
 基于ijkPlayer，开发视频播放器 支持rtmp 和 网络视频，本地视频
-
+重新编译 IJKMediaFramework 支持 dash 播放
+模拟器目前无法播放dash 
 ## Requirements
 
 项目里面添加data.txt 把下面写进去就可以了

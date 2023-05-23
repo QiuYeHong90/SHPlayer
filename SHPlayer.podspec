@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   # s.resource_bundles = {
   #   'SHPlayer' => ['SHPlayer/Assets/*.png']
   # }
-  s.libraries     = "c++", "z", "bz2"
+  s.libraries     = "c++", "z", "bz2", "xml2"
 #  valid_archs = ['armv7s','arm64','x86_64']
 #  s.xcconfig = {
 #    'VALID_ARCHS' =>  valid_archs.join(' '),
