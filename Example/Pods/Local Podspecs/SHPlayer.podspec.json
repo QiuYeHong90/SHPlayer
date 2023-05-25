@@ -23,7 +23,8 @@
   "libraries": [
     "c++",
     "z",
-    "bz2"
+    "bz2",
+    "xml2"
   ],
   "frameworks": [
     "UIKit",
