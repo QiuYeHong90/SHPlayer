@@ -199,7 +199,7 @@ extension ViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = self.dataArray[indexPath.row]
         
-        
+        self.playerView.stop()
         guard let url = model.url else {
             return
         }

@@ -42,7 +42,10 @@ public class SHPlayer: UIView {
         guard let options = IJKFFOptions.byDefault() else {
             return
         }
-//        options?.setValue("ijklas", forKey: "iformat")
+        /// 0 是软解吗 1 是硬解码
+        options.setPlayerOptionIntValue(1, forKey: "videotoolbox")
+        options.setPlayerOptionIntValue(5, forKey: "framedrop")
+        
 //        options?.setValue("ijklas", forKey: "iformat")
 //        options?.setValue("ijklas", forKey: "iformat")
         guard let url = self.url else {
@@ -53,7 +56,7 @@ public class SHPlayer: UIView {
         self.player?.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
         self.player?.view.frame = self.bounds
-        self.player?.scalingMode = .aspectFill
+        self.player?.scalingMode = .aspectFit
         self.player?.shouldAutoplay = true;
         self.autoresizesSubviews = true
         if let view = self.player?.view {
