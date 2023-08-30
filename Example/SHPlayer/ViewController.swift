@@ -32,50 +32,54 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.loadData()
         
+        
     }
     
     func loadData() {
-        guard let path = Bundle.main.path(forResource: "data.txt", ofType: nil) else {
-            return
-        }
-//        data.txt
-        guard let text = try? String.init(contentsOfFile: path) else {
-            return
-        }
-//        #EXTM3U
-        let test = text.components(separatedBy: "#EXTM3U\n").last ?? ""
-        let list = test.components(separatedBy: "#EXTINF:-1 ")
-        var modelList:[VideoModel] = []
-        for item in list {
-            let mList = item.components(separatedBy: "\n")
-            let titles = (mList.first ?? "").components(separatedBy: " ")
-            let jj = titles.first { testItem in
-                return testItem.hasPrefix("group-title=")
-            } ?? ""
-            
-            print("mList == \(mList) \(mList.count)")
-            
-            
-            
-//            let mList = mList.first.components(separatedBy: ":rtmp")
-            var itemM = VideoModel.init()
-            itemM.name = jj.components(separatedBy: "group-title=").last ?? ""
-            if mList.count >= 2 {
-                itemM.url = mList[1]
-            }
-            
-           
-            modelList.append(itemM)
-        }
-        
-        self.dataArray = modelList
-        self.tableView.reloadData()
+//        guard let path = Bundle.main.path(forResource: "data.txt", ofType: nil) else {
+//            return
+//        }
+////        data.txt
+//        guard let text = try? String.init(contentsOfFile: path) else {
+//            return
+//        }
+////        #EXTM3U
+//        let test = text.components(separatedBy: "#EXTM3U\n").last ?? ""
+//        let list = test.components(separatedBy: "#EXTINF:-1 ")
+//        var modelList:[VideoModel] = []
+//        for item in list {
+//            let mList = item.components(separatedBy: "\n")
+//            let titles = (mList.first ?? "").components(separatedBy: " ")
+//            let jj = titles.first { testItem in
+//                return testItem.hasPrefix("group-title=")
+//            } ?? ""
+//
+//            print("mList == \(mList) \(mList.count)")
+//
+//
+//
+////            let mList = mList.first.components(separatedBy: ":rtmp")
+//            var itemM = VideoModel.init()
+//            itemM.name = jj.components(separatedBy: "group-title=").last ?? ""
+//            if mList.count >= 2 {
+//                itemM.url = mList[1]
+//            }
+//
+//
+//            modelList.append(itemM)
+//        }
+//
+//        self.dataArray = modelList
+//        self.dataArray = [.init(name: "test", url: "https://d1yk6suzx1fql9.cloudfront.net/video/20230811/18bar65n2v337bvsqu097hjso9-16917495168100.mp4")]
+//        self.tableView.reloadData()
     }
     @IBAction func tClick(_ sender: Any) {
 //        "rtmp://58.200.131.2:1935/livetv/cctv6"
-        
+        self.playerView.stop()
 //        http://203.162.235.41:16908
-        let url = "rtmp://media3.scctv.net/live/scctv_800"
+        let url = "https://d1yk6suzx1fql9.cloudfront.net/video/20230811/18bar65n2v337bvsqu097hjso9-16917495168100.mp4"
+        self.playerView.playbackRate = 1.5
+        self.playerView.isVideotoolbox = false
         self.playerView.play(url: url)
         self.playerView.prepareToPlay()
     }
@@ -86,11 +90,14 @@ class ViewController: UIViewController {
     }
     @IBAction func btnClick(_ sender: Any) {
         
-        let m = 0xf & 0x9
-        print("m == \(m)")
-//        let color = UIColor.hex(text: "00FF00")
-        let color = UIColor.color(hex: "00FF00")
-        self.view.backgroundColor = color
+        self.playerView.stop()
+//        http://203.162.235.41:16908
+        let url = "https://d1yk6suzx1fql9.cloudfront.net/video/20230811/18bar65n2v337bvsqu097hjso9-16917495168100.mp4"
+        self.playerView.playbackRate = 1
+        
+        self.playerView.isVideotoolbox = true
+        self.playerView.play(url: url)
+        self.playerView.prepareToPlay()
         
     }
     

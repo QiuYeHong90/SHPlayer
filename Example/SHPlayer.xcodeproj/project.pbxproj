@@ -215,11 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4B2ST463T5;
+						DevelopmentTeam = YQ2BBNYL5U;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YQ2BBNYL5U;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -483,7 +484,7 @@
 			baseConfigurationReference = A1AB176E83E5A1593259CD90 /* Pods-SHPlayer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4B2ST463T5;
+				DEVELOPMENT_TEAM = YQ2BBNYL5U;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = SHPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -591,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C9865693B63F2E7640E784B /* Pods-SHPlayer_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YQ2BBNYL5U;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -614,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B9F8EE8E6EDA11B3864BC86 /* Pods-SHPlayer_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YQ2BBNYL5U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
