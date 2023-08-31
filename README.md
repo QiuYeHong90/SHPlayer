@@ -12,7 +12,7 @@ IJKMediaFramework.xcframework 支持模拟器iPhone12  和 真机
 重新编译 IJKMediaFramework 支持 dash 播放
 模拟器目前无法播放dash 
 ## Requirements
-
+<!--ijkio_cache_open-->
 项目里面添加data.txt 把下面写进去就可以了
 ```
 香港财经:rtmp://202.69.69.180:443/webcast/bshdlive-pc

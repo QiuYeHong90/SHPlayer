@@ -99,6 +99,8 @@ class ViewController: UIViewController {
         self.playerView.play(url: url)
         self.playerView.prepareToPlay()
         
+//        ijk_av_dict_get
+//        ijk_av_strstart
     }
     
     override func didReceiveMemoryWarning() {

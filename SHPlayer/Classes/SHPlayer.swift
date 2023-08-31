@@ -48,7 +48,7 @@ public class SHPlayer: UIView {
     func toPlay() {
         IJKFFMoviePlayerController.checkIfFFmpegVersionMatch(true)
         // 设置日志级别
-        IJKFFMoviePlayerController.setLogLevel(k_IJK_LOG_DEBUG)
+        IJKFFMoviePlayerController.setLogLevel(k_IJK_LOG_INFO)
 
         // 注册日志回调
         IJKFFMoviePlayerController.setLogReport(true)
@@ -80,8 +80,13 @@ public class SHPlayer: UIView {
         options.setFormatOptionValue(mapPath, forKey: "cache_map_path")
         options.setFormatOptionIntValue(1, forKey: "parse_cache_map")
         options.setFormatOptionIntValue(1, forKey: "auto_save_map")
+        options.setFormatOptionIntValue(0, forKey: "cache_file_close")
+        options.setFormatOptionIntValue(1, forKey: "only_read_file")
+        
+        
         options.setFormatOptionIntValue(1, forKey: "enable-accurate-seek")
         var strCacheUrl = "ijkio:cache:ffio:\(self.url?.absoluteString ?? "")"
+//        var strCacheUrl = "cache:\(self.url?.absoluteString ?? "")"
         newUrl = URL.init(string: strCacheUrl)
         print("options == \(options)")
         
@@ -131,7 +136,15 @@ public class SHPlayer: UIView {
     func getMapPath(with url: URL?) -> String {
         let fileName = self.getFileName(with: url)
         let filePath = self.getCacheFile(with: url)
-        let mapPath = "\(filePath)/map/\(fileName).tmp"
+        let libPath = "\(NSHomeDirectory())/Library"
+        let caches = "\(libPath)/Caches/"
+        let mapDir = "\(caches)map"
+        let isExist = FileManager.default.fileExists(atPath: mapDir)
+        if isExist == false {
+            try? FileManager.default.createDirectory(atPath: mapDir, withIntermediateDirectories: true)
+        }
+        let mapPath = "\(mapDir)/\(fileName).tmp"
+        print("mapPath === \(mapDir)")
         return mapPath
     }
 }
