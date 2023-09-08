@@ -6,6 +6,7 @@
 //  Copyright (c) 2021 yeqiu. All rights reserved.
 //
 
+import AVKit
 import SHPlayer
 import UIKit
 
@@ -101,6 +102,14 @@ class ViewController: UIViewController {
         
 //        ijk_av_dict_get
 //        ijk_av_strstart
+        
+        let jj = AVPictureInPictureController.init(playerLayer: AVPlayerLayer())
+        
+        jj?.stopPictureInPicture()
+//        AVPictureInPictureController
+        
+//        AVPictureInPictureController.init(playerLayer: <#T##AVPlayerLayer#>)
+        
     }
     
     override func didReceiveMemoryWarning() {

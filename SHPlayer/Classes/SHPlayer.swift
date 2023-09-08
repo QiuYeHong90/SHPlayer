@@ -13,6 +13,7 @@ func ijkPlayerLogCallback(log: String) {
     print("IJKPlayer Log: \(log)")
 }
 public class SHPlayer: UIView {
+    
     public var url:URL?
     public private(set) var newUrl: URL?
     /// 倍速播放 默认1倍速
@@ -32,7 +33,6 @@ public class SHPlayer: UIView {
     
     func initCommon() {
         self.toPlay()
-        
     }
     public func stop() {
         self.player?.stop()
@@ -77,11 +77,11 @@ public class SHPlayer: UIView {
         
 //        options.setOptionIntValue(1, forKey: "dns_cache_clear", of: kIJKFFOptionCategoryFormat)
         options.setFormatOptionValue(filePath, forKey: "cache_file_path")
-        options.setFormatOptionValue(mapPath, forKey: "cache_map_path")
+//        options.setFormatOptionValue(mapPath, forKey: "cache_map_path")
         options.setFormatOptionIntValue(1, forKey: "parse_cache_map")
         options.setFormatOptionIntValue(1, forKey: "auto_save_map")
         options.setFormatOptionIntValue(0, forKey: "cache_file_close")
-        options.setFormatOptionIntValue(1, forKey: "only_read_file")
+//        options.setFormatOptionIntValue(1, forKey: "only_read_file")
         
         
         options.setFormatOptionIntValue(1, forKey: "enable-accurate-seek")

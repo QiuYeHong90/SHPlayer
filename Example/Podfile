@@ -4,7 +4,7 @@ platform :ios, '11.0'
 
 target 'SHPlayer_Example' do
   pod 'SHPlayer', :path => '../'
-
+  pod 'LookinServer', :subspecs => ['Swift'], :configurations => ['Debug']
   target 'SHPlayer_Tests' do
     inherit! :search_paths
 

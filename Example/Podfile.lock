@@ -1,16 +1,25 @@
 PODS:
+  - LookinServer/Core (1.1.7)
+  - LookinServer/Swift (1.1.7):
+    - LookinServer/Core
   - SHPlayer (0.1.0)
 
 DEPENDENCIES:
+  - LookinServer/Swift
   - SHPlayer (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LookinServer
 
 EXTERNAL SOURCES:
   SHPlayer:
     :path: "../"
 
 SPEC CHECKSUMS:
+  LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
   SHPlayer: 6f39e7705640524110fcabfdd690bbb860860bb4
 
-PODFILE CHECKSUM: ce0019b90cb977cc1e6bf37957275752ead0a603
+PODFILE CHECKSUM: 2de0304c818acacfc21a334dcb9fc70298ab3523
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
