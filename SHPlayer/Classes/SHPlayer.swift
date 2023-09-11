@@ -99,13 +99,16 @@ public class SHPlayer: UIView {
         self.player?.view.removeFromSuperview()
         self.player = IJKFFMoviePlayerController.init(contentURL: url, with: options)
         
-        
+
         self.player?.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
         self.player?.view.frame = self.bounds
         self.player?.scalingMode = .aspectFit
         self.player?.shouldAutoplay = true;
         self.player?.shouldShowHudView = true
+        
+        player?.httpOpenDelegate = self
+        
         self.autoresizesSubviews = true
         if let view = self.player?.view {
             self.backgroundColor = .red
@@ -150,7 +153,13 @@ public class SHPlayer: UIView {
 }
 
 
-
+extension SHPlayer: IJKMediaUrlOpenDelegate {
+    public func willOpenUrl(_ urlOpenData: IJKMediaUrlOpenData!) {
+        
+    }
+    
+    
+}
 
 
 
